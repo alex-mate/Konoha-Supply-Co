@@ -1,12 +1,28 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router";
-import App from "./App.jsx";
+import { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+import './index.css';
+import App from './App.jsx';
+import Home from './Pages/Home.jsx';
+import Cart from './Pages/Cart.jsx';
+import Shop from './Pages/Shop.jsx';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },
+      {path: '/home', element: <Home />},
+      {path: '/ninja-shop', element: <Shop />},
+      {path: '/your-inventory', element: <Cart />},
+    ]
+  }
+]);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
 );
