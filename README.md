@@ -12,7 +12,9 @@
 
 Built as the **Shopping Cart** project for [The Odin Project](https://www.theodinproject.com/), this application goes beyond a basic shopping cart by combining a custom product catalog, client-side routing, shared state, automated testing, and an illustrated storefront.
 
-<!-- Add the deployed GitHub Pages URL here once the site is published. -->
+## 🌐 Live Demo
+
+[Visit Konoha Supply Co.](https://alex-mate.github.io/Konoha-Supply-Co/)
 
 ## Features
 
